@@ -42,7 +42,7 @@ class Brain(object):
 class LogBot(irc.IRCClient):
     """A logging IRC bot."""
 
-    nickname = "nigelbot"
+    nickname = "cletusbot"
 
     def connectionMade(self):
         irc.IRCClient.connectionMade(self)
