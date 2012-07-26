@@ -76,6 +76,9 @@ class GreetingMatcher(BaseMatcher):
                 'couldn\'t hit the broad side of a barn',
                 'I reckon he\'s gon be a problem round \'ere',
                 'fit to be tied',
+                'dumb as a sack full of hammers',
+                'He\'s got the personality of a dishrag',
+                'If he had bird brains he\'d fly backwards.'
             ]
             message = random.choice(sups)
             if user:
