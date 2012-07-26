@@ -13,7 +13,11 @@ class GreetingMatcher(BaseMatcher):
         'all: hello',
         'all: hey',
         'all: hi',
-        ''
+        'hi',
+        'hey',
+        'hello',
+        'sup',
+        'howdy',
     ]
 
     responses = [
@@ -22,6 +26,9 @@ class GreetingMatcher(BaseMatcher):
         'sup, yankee',
         'howdy tater',
         'how do?',
+        'what\'s good?',
+        'yeap',
+        'yeallow',
     ]
 
     def respond(self, message, user=None):
@@ -30,4 +37,3 @@ class GreetingMatcher(BaseMatcher):
             if user:
                 message = user + ": " + message
             self.speak(message)
-
