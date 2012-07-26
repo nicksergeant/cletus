@@ -48,6 +48,7 @@ class GreetingMatcher(BaseMatcher):
                 'later varmint',
                 'skedaddle',
                 'y\'all come back now, ya-hear',
+                'best get out here lickity split',
             ]
             message = random.choice(laters)
             if user:
@@ -59,6 +60,22 @@ class GreetingMatcher(BaseMatcher):
                 'Them fellas done killed a 9 point yesterday morn',
                 'To get to their house, go up the holler, follow the creck, past to old oak and turn north',
                 'If you want to get something done, find a busy man. There\'s a reason he\'s busy',
+                'everythings hunkey dorey',
+            ]
+            message = random.choice(sups)
+            if user:
+                message = user + ": " + message
+            self.speak(message)
+
+        if 'how about that nigelbot' in message.lower():
+            sups = [
+                'fell out of the ugly tree and hit every branch on the way down',
+                'high-cotton uppity yankee',
+                'won\'t shut his yapper',
+                'younguns',
+                'couldn\'t hit the broad side of a barn',
+                'I reckon he\'s gon be a problem round \'ere',
+                'fit to be tied',
             ]
             message = random.choice(sups)
             if user:
