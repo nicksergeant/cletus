@@ -1,5 +1,7 @@
 from base import BaseMatcher
 
+import random
+
 
 class GreetingMatcher(BaseMatcher):
 
@@ -14,9 +16,17 @@ class GreetingMatcher(BaseMatcher):
         ''
     ]
 
+    responses = [
+        'how y\'all doin',
+        'yeeeaasiree',
+        'sup, yankee',
+        'howdy tater',
+        'how do?',
+    ]
+
     def respond(self, message, user=None):
         if message.lower() in self.greetings:
-            message = "hey"
+            message = random.choice(self.responses)
             if user:
                 message = user + ": " + message
             self.speak(message)

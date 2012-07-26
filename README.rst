@@ -1,4 +1,4 @@
-Nigelbot
+<strike>Nigelbot</strike> Cletusbot
 ========
 
 A simple IRC bot that responds to commands.  Inspired by Hubot.  Implemented in
