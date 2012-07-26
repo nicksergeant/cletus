@@ -1,6 +1,6 @@
 from base import BaseMatcher
 
-import random, requests, json
+import random, re, requests, json
 
 
 class SniptMatcher(BaseMatcher):
@@ -14,7 +14,8 @@ class SniptMatcher(BaseMatcher):
         data = data[0]
 
         for group in data:
-            if message.lower() in data[group]['matches']:
+            pat = re.compile('|'.join([str(x) for x in data[group]['matches']]))
+            if pat.match(str(message.lower())):
                 message = random.choice(data[group]['responses'])
                 if user:
                     message = user + ": " + message
