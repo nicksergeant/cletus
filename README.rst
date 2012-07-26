@@ -1,5 +1,5 @@
-Cletusbot
-=========
+<del>Nigelbot</del> Cletusbot
+========
 
 A simple IRC bot that responds to commands.  Inspired by Hubot.  Implemented in
 Python.
