@@ -58,9 +58,10 @@ class GreetingMatcher(BaseMatcher):
         if 'sup cletus' in message.lower():
             sups = [
                 'Them fellas done killed a 9 point yesterday morn',
-                'To get to their house, go up the holler, follow the creck, past to old oak and turn north',
                 'If you want to get something done, find a busy man. There\'s a reason he\'s busy',
                 'everythings hunkey dorey',
+                'You scared the livin\' daylights out of me.',
+                'Butter my butt and call me a biscuit!',
             ]
             message = random.choice(sups)
             if user:
@@ -78,7 +79,9 @@ class GreetingMatcher(BaseMatcher):
                 'fit to be tied',
                 'dumb as a sack full of hammers',
                 'He\'s got the personality of a dishrag',
-                'If he had bird brains he\'d fly backwards.'
+                'If he had bird brains he\'d fly backwards.',
+                'He talks like he\'s got a mouthful of mush.',
+                'He\'s all hat and no cattle.',
             ]
             message = random.choice(sups)
             if user:
@@ -87,6 +90,15 @@ class GreetingMatcher(BaseMatcher):
 
         if 'how long' in message.lower():
             message = 'Ima figurin\' it\'ll be two days'
+            if user:
+                message = user + ": " + message
+            self.speak(message)
+
+        if 'how do you' in message.lower():
+            hows = [
+                'go up the holler, follow the creck, past to old oak and turn north',
+            ]
+            message = random.choice(hows)
             if user:
                 message = user + ": " + message
             self.speak(message)
