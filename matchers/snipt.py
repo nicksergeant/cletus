@@ -15,7 +15,7 @@ class SniptMatcher(BaseMatcher):
 
         for group in data:
             pat = re.compile('|'.join([str(x) for x in data[group]['matches']]))
-            if pat.search(str(message.lower())):
+            if pat.match(str(message.lower())):
                 message = random.choice(data[group]['responses'])
                 if user:
                     message = user + ": " + message
